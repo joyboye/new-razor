@@ -1,0 +1,15 @@
+﻿@page
+@model Candy_Store_App2.Pages.GrabNewDataModel
+@{
+    ViewData["Title"] = "GrabNewData";
+}
+
+<h1>GrabNewData</h1>
+
+
+@foreach (var item in Model.Store)
+{
+    <h1>@item.StoreName</h1>
+    <a asp-page="./individual" asp-route-id="@item.StoreId">Individual</a>
+}
+
